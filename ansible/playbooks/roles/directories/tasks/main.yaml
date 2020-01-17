@@ -1,0 +1,17 @@
+---
+- name: Make sure necessary directories exist
+  file:
+    state: directory
+    path: "{{ item.path }}"
+    owner: "{{ item.user }}"
+    group: "{{ item.user }}"
+    mode: "{{ item.mode }}"
+  loop:
+    - { mode: '0755', user: 'root', path: '/etc/pacman.d/hooks' }
+    - { mode: '0755', user: 'root', path: '/etc/systemd/journald.conf.d' }
+    - {mode: '0755', user: '{{ username }}', path: '/home/{{ username }}/Downloads/Chromium' }
+    - {mode: '0755', user: '{{ username }}', path: '/home/{{ username }}/Downloads/qBittorrent' }
+    - {mode: '0755', user: '{{ username }}', path: '/home/{{ username }}/Downloads/Kotatogram' }
+    - {mode: '0700', user: '{{ username }}', path: '/home/{{ username }}/.ssh' }
+    - {mode: '0700', user: '{{ username }}', path: '/home/{{ username }}/.gnupg' }
+    - {mode: '0700', user: '{{ username }}', path: '/home/{{ username }}/.password-store' }

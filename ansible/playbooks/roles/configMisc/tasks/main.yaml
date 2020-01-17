@@ -1,0 +1,31 @@
+---
+- name: "Pacman: Colorize, Total download stats instead of single files, pacman-game-like character in progress bar"
+  lineinfile:
+    path: /etc/pacman.conf
+    insertafter: '^\[options\]'
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+  loop:
+    - { regexp: '^Color', line: 'Color' }
+    - { regexp: '^TotalDownload', line: 'TotalDownload' }
+- name: Set makeflags to max number of threads - speeds up compiling PKGBUILDs, and set compressxz to max number of threads - speeds up compressing packages during installing
+  lineinfile:
+    dest: /etc/makepkg.conf
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+  loop:
+    - { regexp: '^MAKEFLAGS=', line: 'MAKEFLAGS="-j$(nproc)"' }
+    - { regexp: '^COMPRESSXZ=', line: 'COMPRESSXZ=(xz -c -z - --threads=0)' }
+- name: Set max journal size to 200MB, prevents having up to 4GiB journal
+  get_url:
+    url: https://git.auteiy.me/dmitry/archInstall/raw/master/files/journal/00-journal-size.conf
+    dest: /etc/systemd/journald.conf.d/00-journal-size.conf
+    force: yes
+- name: Add a rule to enable beep via the motherboard speaker for all users
+  copy:
+    dest: /usr/lib/udev/rules.d/70-pcspkr-beep.rules
+    content: 'ACTION=="add", SUBSYSTEM=="input", ATTRS{name}=="PC Speaker", ENV{DEVNAME}!="", TAG+="uaccess"'
+- name: Fully enable SysRQ - https://en.wikipedia.org/wiki/Magic_SysRq_key
+  copy:
+    dest: /etc/sysctl.d/sysrq.conf
+    content: 'kernel.sysrq=1'

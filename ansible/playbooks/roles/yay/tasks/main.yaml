@@ -1,0 +1,3 @@
+---
+- name: Install yay-bin
+  shell: "cd /tmp; wget https://aur.archlinux.org/cgit/aur.git/snapshot/yay-bin.tar.gz; gunzip yay-bin.tar.gz; tar xvf yay-bin.tar; cd yay-bin; chown {{ username }}:{{ username }} ./ -R; sudo -u {{ username }} makepkg; pacman -U *.tar.xz --noconfirm"

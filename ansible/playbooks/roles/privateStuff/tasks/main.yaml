@@ -1,0 +1,7 @@
+---
+- name: Clone ssh repository
+  shell: 'git clone https://{{ loginPrivate}}:{{ passwordPrivate }}@{{ urlPrivate }}/ssh /home/{{ username }}/.ssh'
+- name: Clone Pass repository
+  shell: 'git clone https://{{ loginPrivate}}:{{ passwordPrivate }}@{{ urlPrivate }}/password-manager /home/{{ username }}/.password-store'
+- name: Clone gpg repository
+  shell: 'git clone https://{{ loginPrivate}}:{{ passwordPrivate }}@{{ urlPrivate }}/gpg /home/{{ username }}/.gnupg'

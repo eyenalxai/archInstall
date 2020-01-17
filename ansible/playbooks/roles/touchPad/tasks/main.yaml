@@ -1,0 +1,6 @@
+---
+- name: Copy touchpad config
+  get_url:
+    url: https://git.auteiy.me/dmitry/archInstall/raw/master/files/touchPad/90-touchpad.conf
+    dest: /etc/X11/xorg.conf.d/90-touchpad.conf
+    force: yes

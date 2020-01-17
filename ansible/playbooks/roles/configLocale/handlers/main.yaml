@@ -1,0 +1,4 @@
+---
+- name: Regenerate locales
+  listen: "regenerate locales"
+  shell: /usr/bin/locale-gen

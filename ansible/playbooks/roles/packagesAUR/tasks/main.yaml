@@ -1,0 +1,5 @@
+---
+- name: Update all packages + AUR packages
+  shell: yay -Syu betterlockscreen btrfs-du colorpicker dragon-drag-and-drop dunst-git hunspell-ru ix kotatogram-desktop-bin la-capitaine-icon-theme neovim-plug openconnect-gui polybar posy-cursors starship-bin ttf-apple-emoji ttf-exo-2 ufetch-git yadm yay-bin --noconfirm
+  become: yes
+  become_user: "{{ username }}"

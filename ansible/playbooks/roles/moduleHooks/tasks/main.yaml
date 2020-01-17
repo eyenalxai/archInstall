@@ -1,0 +1,12 @@
+---
+# Create hooks to prevent Arch from murdering kernel modules on kernel upgrade (so you can for example use a flash drive after upgrading the kernel)
+- name: Setup module backup pre hook
+  get_url:
+    url: https://git.auteiy.me/dmitry/archInstall/raw/master/hooks/backup-modules-pre.hook
+    dest: /etc/pacman.d/hooks/backup-modules-pre.hook
+    force: yes
+- name: Setup module backup post hook
+  get_url:
+    url: https://git.auteiy.me/dmitry/archInstall/raw/master/hooks/backup-modules-post.hook
+    dest: /etc/pacman.d/hooks/backup-modules-post.hook
+    force: yes

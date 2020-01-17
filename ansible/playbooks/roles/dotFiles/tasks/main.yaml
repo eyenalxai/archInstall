@@ -1,0 +1,5 @@
+---
+- name: Deploy dotfiles 
+  shell: yadm clone https://git.auteiy.me/dmitry/dotFiles.git 
+  become: yes
+  become_user: "{{ username }}"

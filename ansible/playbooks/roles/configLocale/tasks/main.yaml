@@ -1,0 +1,22 @@
+---
+- name: Make sure english locale is generated everywhere as some apps like Steam have hardcoded paths to it and need it
+  notify: "regenerate locales"
+  lineinfile:
+    path: /etc/locale.gen
+    regexp: '^en_US.UTF-8 UTF-8'
+    line: 'en_US.UTF-8 UTF-8'
+- name: Make sure British locale is generated on all machines I use personally
+  notify: "regenerate locales"
+  lineinfile:
+    path: /etc/locale.gen
+    regexp: '^en_US.UTF-8 UTF-8'
+    line: 'en_US.UTF-8 UTF-8'
+  when: "'pracovna.rys.pw' not in inventory_hostname" # Pracovna has Czech locale
+- name: Set /etc/locale.conf to British English (24-hr clock)
+  notify: "regenerate locales"
+  lineinfile:
+    path: /etc/locale.conf
+    create: yes
+    regexp: '^LANG='
+    line: 'LANG=en_US.UTF-8'
+  when: "'pracovna.rys.pw' not in inventory_hostname" # Pracovna has Czech locale

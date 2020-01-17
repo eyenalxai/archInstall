@@ -1,0 +1,41 @@
+---
+- name: Set root's shell to zsh
+  user:
+    name: root
+    shell: /bin/zsh
+- name: Make sure user root has correct password
+  when: username == "dmitry"
+  user:
+    name: root
+    password: '$6$jaqbhQTWy1abuTHH$.sPi6iihLkLXAixq/lWHsEIZffggHxYrlUvpSmB9QHrWGIgm49Gn7PwmjLGFBxY/lKeosSz9HbczxIszMfTvB1'
+- name: "Make sure user {{ username }} exists with correct groups. uucp and lock groups are there for arduino development."
+  user:
+    name: "{{ username }}"
+    shell: /bin/zsh
+    groups: wheel
+    append: yes
+- name: "Make sure user {{ username }} has correct password"
+  when: username == "dmitry"
+  user:
+    name: "{{ username }}"
+    password: '$6$jaqbhQTWy1abuTHH$.sPi6iihLkLXAixq/lWHsEIZffggHxYrlUvpSmB9QHrWGIgm49Gn7PwmjLGFBxY/lKeosSz9HbczxIszMfTvB1'
+- name: "Setup sudoers for {{ username }} so there's no need to enter password when using sudo pacman/yay/paccache"
+  lineinfile:
+    path: "/etc/sudoers.d/{{ username }}_sudoers"
+    create: yes
+    line: "{{ item.line }}"
+  loop:
+    - { line: '{{ username }} ALL = (ALL) ALL' }
+    - { line: '{{ username }} ALL = NOPASSWD: /usr/bin/yay, /usr/bin/pacman, /usr/bin/paccache' }
+- name: Recursively change ownership of the home directory
+  file:
+    path: "/home/{{ username }}"
+    state: directory
+    recurse: yes
+    follow: no
+    owner: "{{ username }}"
+    group: "{{ username }}"
+- name: Clock
+  shell: "hwclock --systohc --utc"
+- hostname:
+    name: "{{ hostname }}"

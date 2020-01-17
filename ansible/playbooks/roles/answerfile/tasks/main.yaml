@@ -1,0 +1,40 @@
+---
+- name: read the answerfile present if Arch was installed via install.sh
+  shell: cat /root/answerfile || echo "not found"
+  register: user_accts
+- name: Get username
+  shell: '(source /root/answerfile && echo ${username})'
+  register: answerusername
+- name: Set username as a fact
+  set_fact:
+    username: "{{ answerusername.stdout }}"
+- name: Set hostname as archbox
+  shell: '(source /root/answerfile && echo ${hostname})'
+  register: answerhostname
+- name: Set hostname as a fact
+  set_fact:
+    hostname: "{{ answerhostname.stdout }}"
+- name: Set timezone to Europe/Samara
+  shell: 'echo "Europe/Samara"'
+  register: answertimezone
+- name: Set timezone as a fact
+  set_fact:
+    timezone: "{{ answertimezone.stdout }}"
+- name: Get login for private stuff
+  shell: '(source /root/answerfile && echo ${loginPrivate})'
+  register: answerloginPrivate
+- name: Set loginPrivate as a fact
+  set_fact:
+    loginPrivate: "{{ answerloginPrivate.stdout }}"
+- name: Get password for private stuff
+  shell: '(source /root/answerfile && echo ${passwordPrivate})'
+  register: answerpasswordPrivate
+- name: Set passwordPrivate as a fact
+  set_fact:
+    passwordPrivate: "{{ answerpasswordPrivate.stdout }}"
+- name: Get url for private stuff
+  shell: '(source /root/answerfile && echo ${urlPrivate})'
+  register: answerurlPrivate
+- name: Set urlPrivate as a fact
+  set_fact:
+    urlPrivate: "{{ answerurlPrivate.stdout }}"

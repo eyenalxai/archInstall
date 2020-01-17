@@ -1,0 +1,6 @@
+---
+- name: Copy environment config
+  get_url:
+    url: https://git.auteiy.me/dmitry/archInstall/raw/master/files/environment/environment
+    dest: /etc/environment
+    force: yes

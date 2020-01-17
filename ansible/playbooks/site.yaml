@@ -1,0 +1,29 @@
+---
+- hosts: all, localhost
+  roles:
+    - { role: answerfile, tags: [ 'answerfile' ] }                          # Load /root/answerfile
+    - { role: timezone, tags: [ 'timezone' ] }                              # Set timezone to Europe/Prague
+    - { role: multilib, tags: [ 'multilib' ] }                              # Enable [multilib] repository
+    - { role: packagesREPO, tags: [ 'packagesREPO' ] }                      # Install packages from main repositories
+    - { role: users, tags: [ 'users' ] }                                    # Setup user, passwords, shells, groups
+    - { role: directories, tags: [ 'directories' ] }                        # Make sure necessary directories exist
+    - { role: configLocale, tags: [ 'configLocale' ] }                      # ConfigureLocale to en_US
+    - { role: btrfsDefaultSubvolume, tags: [ 'btrfsDefaultSubvolume' ] }    # Set default btrfs subvolume
+    - { role: snapperConfig, tags: [ 'snapperConfig' ] }                    # Enable snapper
+    - { role: configMisc, tags: [ 'configMisc' ] }                          # Configure all kinds of stuff
+    - { role: yay, tags: [ 'yay' ] }                                        # Install yay
+    - { role: packagesAUR, tags: [ 'packagesAUR' ] }                        # Install AUR packages
+    - { role: systemdBoot, tags: [ 'systemdBoot' ] }                        # Install bootloader
+    - { role: environment, tags: [ 'environment' ] }                        # Copy environment config
+    - { role: moduleHooks, tags: [ 'moduleHooks' ] }                        # Set up hooks which backup kernel modules on kernel upgrade
+    - { role: touchPad, tags: [ 'touchPad' ] }                              # Copy touchPad config
+    - { role: autoLogin, tags: [ 'autoLogin' ] }                            # Copy stuff for autoLogin 
+    - { role: lockScreen, tags: [ 'lockScreen' ] }                          # Copy stuff for lockScreen 
+    - { role: iwd, tags: [ 'iwd' ] }                                        # Copy iwd config
+    # - { role: resolv, tags: [ 'resolv' ] }                                  # Copy resolv config
+    - { role: systemdNetworkd, tags: [ 'systemdNetworkd' ] }                # Copy systemdNetworkd config
+    - { role: systemdServices, tags: [ 'systemdServices' ] }                # Enable systemd services
+    - { role: rootlessXorg, tags: [ 'rootlessXorg' ] }                      # Enable rootless Xorg
+    - { role: swappiness10, tags: [ 'swappiness10' ] }                      # Set swappiness to 10
+    - { role: dotFiles, tags: [ 'dotFiles' ] }                              # Deploy dotFiles
+    - { role: privateStuff, tags: [ 'privateStuff' ] }                      # Clone privateStuff

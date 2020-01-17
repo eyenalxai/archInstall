@@ -1,0 +1,12 @@
+[Unit]
+Description=i3lock on suspend
+Before=suspend.target
+
+[Service]
+User=dmitry
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=betterlockscreen -l
+
+[Install]
+WantedBy=suspend.target

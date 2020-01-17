@@ -1,0 +1,13 @@
+---
+- name: Install systemd-boot
+  shell: "bootctl --path=/boot install"
+- name: Copy loader config 
+  get_url:
+    url: https://git.auteiy.me/dmitry/archInstall/raw/master/files/systemdBoot/loader.conf   
+    dest: /boot/loader/loader.conf
+    force: yes
+- name: Copy linux stock kernel config
+  get_url:
+    url: https://git.auteiy.me/dmitry/archInstall/raw/master/files/systemdBoot/entries/archStock.conf
+    dest: /boot/loader/entries/archStock.conf
+    force: yes

@@ -1,0 +1,29 @@
+---
+- name: Enable lockScreen service
+  systemd:
+    name: wakelock.service
+    enabled: yes
+# - name: Enable zramswap service
+#   systemd:
+#     name: zramswap.service
+#     enabled: yes
+- name: Enable fstrim timer
+  systemd:
+    name: fstrim.timer
+    enabled: yes
+- name: Mask lvm2-monitor service
+  systemd:
+    name: lvm2-monitor.service
+    masked: yes
+- name: Enable paccache timer
+  systemd:
+    name: paccache.timer
+    enabled: yes
+- name: Enable iwd service
+  systemd:
+    name: iwd.service
+    enabled: yes
+- name: Enable systemd-networkd service
+  systemd:
+    name: systemd-networkd.service
+    enabled: yes

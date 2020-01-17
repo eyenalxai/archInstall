@@ -1,0 +1,11 @@
+---
+- name: Ensure "Include=/etc/pacman.d/mirrorlist is in section "[multilib]" in specified file"
+  ini_file:
+    path: /etc/pacman.conf
+    section: multilib
+    option: Include
+    value: /etc/pacman.d/mirrorlist
+- name: Upgrade the system by running the equivalent of "pacman -Syu"
+  pacman:
+    update_cache: yes
+    upgrade: yes

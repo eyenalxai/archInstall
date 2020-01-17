@@ -1,0 +1,6 @@
+---
+- name: Enable rootless Xorg
+  get_url:
+    url: https://git.auteiy.me/dmitry/archInstall/raw/master/files/rootlessXorg/Xwrapper.config
+    dest: /etc/X11/Xwrapper.config
+    force: yes

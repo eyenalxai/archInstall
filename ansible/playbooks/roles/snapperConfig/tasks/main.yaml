@@ -1,0 +1,24 @@
+---
+- name: Copy snapper config 
+  get_url:
+    url: https://git.auteiy.me/dmitry/archInstall/raw/master/files/snapper/root
+    dest: /etc/snapper/configs/root
+    force: yes
+- name: Enable it
+  get_url:
+    url: https://git.auteiy.me/dmitry/archInstall/raw/master/files/snapper/snapper
+    dest: /etc/conf.d/snapper
+    force: yes
+- name: Enable cleanup timer
+  systemd:
+    name: snapper-cleanup.timer
+    enabled: yes
+- name: Enable timeline timer
+  systemd:
+    name: snapper-timeline.timer
+    enabled: yes
+- name: Replace cleanup timer with my own
+  get_url:
+    url: https://git.auteiy.me/dmitry/archInstall/raw/master/files/snapper/snapper-cleanup.timer
+    dest: /etc/systemd/system/timers.target.wants/snapper-cleanup.timer
+    force: yes

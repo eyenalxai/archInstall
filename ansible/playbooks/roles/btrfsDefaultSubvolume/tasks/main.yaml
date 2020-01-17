@@ -1,0 +1,3 @@
+---
+- name: Set default subvolume
+  shell: "btrfs subvolume set-default 256 /"
