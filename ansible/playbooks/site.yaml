@@ -1,5 +1,5 @@
 ---
-- hosts: all, localhost
+- hosts: localhost
   roles:
     - { role: answerfile, tags: [ 'answerfile' ] }                          # Load /root/answerfile
     - { role: timezone, tags: [ 'timezone' ] }                              # Set timezone to Europe/Prague
@@ -15,6 +15,7 @@
     - { role: systemdBoot, tags: [ 'systemdBoot' ] }                        # Install bootloader
     - { role: environment, tags: [ 'environment' ] }                        # Copy environment config
     - { role: moduleHooks, tags: [ 'moduleHooks' ] }                        # Set up hooks which backup kernel modules on kernel upgrade
+    - { role: disableNvidia, tags: [ 'disableNvidia' ] }                    # Disable Nvidia
     - { role: touchPad, tags: [ 'touchPad' ] }                              # Copy touchPad config
     - { role: autoLogin, tags: [ 'autoLogin' ] }                            # Copy stuff for autoLogin 
     - { role: lockScreen, tags: [ 'lockScreen' ] }                          # Copy stuff for lockScreen 

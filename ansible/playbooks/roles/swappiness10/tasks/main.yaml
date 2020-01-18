@@ -1,6 +1,6 @@
 ---
 - name: Set swappiness to 10
-  get_url:
-    url: https://git.auteiy.me/dmitry/archInstall/raw/master/files/swappiness10/99-sysctl.conf
+  copy:
+    src: 99-sysctl.conf
     dest: /etc/sysctl.d/99-sysctl.conf
     force: yes

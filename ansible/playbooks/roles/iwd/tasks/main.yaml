@@ -6,7 +6,7 @@
       owner: root
       mode: '0755'
 - name: Copy iwd config
-  get_url:
-    url: https://git.auteiy.me/dmitry/archInstall/raw/master/files/iwd/main.conf
+  copy:
+    src: main.conf
     dest: /etc/iwd/main.conf
     force: yes

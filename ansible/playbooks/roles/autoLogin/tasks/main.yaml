@@ -1,7 +1,7 @@
 ---
 - name: Copy logind config
-  get_url:
-    url: https://git.auteiy.me/dmitry/archInstall/raw/master/files/autoLogin/logind.conf
+  copy:
+    src: logind.conf
     dest: /etc/systemd/logind.conf
     force: yes
 - name: Create destination
@@ -11,7 +11,7 @@
       owner: root
       mode: '0755'
 - name: Copy getty override config
-  get_url:
-    url: https://git.auteiy.me/dmitry/archInstall/raw/master/files/autoLogin/override.conf
+  copy:
+    src: override.conf
     dest: /etc/systemd/system/getty@tty1.service.d/override.conf
     force: yes

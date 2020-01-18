@@ -1,0 +1,9 @@
+---
+- name: Load bbswitch module
+  copy:
+    dest: /etc/modules-load.d/bbswitch.conf
+    content: 'bbswitch'
+- name: Configure options
+  copy:
+    dest: /etc/modprobe.d/bbswitch.conf
+    content: 'options bbswitch load_state=0 unload_state=1'

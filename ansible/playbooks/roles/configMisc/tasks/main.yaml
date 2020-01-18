@@ -19,8 +19,8 @@
     - { regexp: '^MAKEFLAGS=', line: 'MAKEFLAGS="-j$(nproc)"' }
     - { regexp: '^COMPRESSXZ=', line: 'COMPRESSXZ=(xz -c -z - --threads=0)' }
 - name: Set max journal size to 200MB, prevents having up to 4GiB journal
-  get_url:
-    url: https://git.auteiy.me/dmitry/archInstall/raw/master/files/journal/00-journal-size.conf
+  copy:
+    src: 00-journal-size.conf
     dest: /etc/systemd/journald.conf.d/00-journal-size.conf
     force: yes
 - name: Add a rule to enable beep via the motherboard speaker for all users

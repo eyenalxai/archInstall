@@ -1,6 +1,6 @@
 ---
 - name: Copy service file for lockscreen
-  get_url:
-    url: https://git.auteiy.me/dmitry/archInstall/raw/master/files/lockScreen/wakelock.service
+  copy:
+    src: wakelock.service
     dest: /etc/systemd/system/wakelock.service
     force: yes

@@ -1,6 +1,6 @@
 ---
 - name: Copy systemd-network config
-  get_url:
-    url: https://git.auteiy.me/dmitry/archInstall/raw/master/files/systemdNetworkd/25-wireless.network
+  copy:
+    src: 25-wireless.network
     dest: /etc/systemd/network/25-wireless.network
     force: yes
