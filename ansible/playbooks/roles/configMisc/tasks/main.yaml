@@ -1,4 +1,6 @@
 ---
+- name: Set default subvolume
+  shell: "btrfs subvolume set-default 256 /"
 - name: "Pacman: Colorize, Total download stats instead of single files, pacman-game-like character in progress bar"
   lineinfile:
     path: /etc/pacman.conf

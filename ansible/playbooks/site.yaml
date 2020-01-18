@@ -8,9 +8,8 @@
     - { role: users, tags: [ 'users' ] }                                    # Setup user, passwords, shells, groups
     - { role: directories, tags: [ 'directories' ] }                        # Make sure necessary directories exist
     - { role: configLocale, tags: [ 'configLocale' ] }                      # ConfigureLocale to en_US
-    - { role: btrfsDefaultSubvolume, tags: [ 'btrfsDefaultSubvolume' ] }    # Set default btrfs subvolume
-    - { role: snapperConfig, tags: [ 'snapperConfig' ] }                    # Enable snapper
     - { role: configMisc, tags: [ 'configMisc' ] }                          # Configure all kinds of stuff
+    - { role: snapperConfig, tags: [ 'snapperConfig' ] }                    # Enable snapper
     - { role: yay, tags: [ 'yay' ] }                                        # Install yay
     - { role: packagesAUR, tags: [ 'packagesAUR' ] }                        # Install AUR packages
     - { role: systemdBoot, tags: [ 'systemdBoot' ] }                        # Install bootloader

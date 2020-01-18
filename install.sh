@@ -141,8 +141,6 @@ if [[ -z ${1-} ]]; then
 	arch-chroot /mnt /bin/bash -c "/home/${username}/Stuff/archInstall/$(basename ${BASH_SOURCE}) letsgo" 
 
 else # We're in chroot. ${1} is only set after chrooting
-    btrfs subvolume set-default 256 /
-
 	# Source answers
 	source /root/answerfile
 

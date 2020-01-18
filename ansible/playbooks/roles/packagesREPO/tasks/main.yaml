@@ -4,8 +4,6 @@
     state: present
     name:
         - adobe-source-han-sans-otc-fonts
-        - alacritty
-        - ansible
         - atool
         - base
         - bbswitch
@@ -14,8 +12,6 @@
         - bspwm
         - btrfs-progs
         - chromium
-        - dnsmasq
-        - ebtables
         - enchant
         - feh
         - git
@@ -32,16 +28,11 @@
         - linux-firmware
         - lxappearance
         - maim
-        - nano
-        - neofetch
         - neovim
         - nextcloud-client
-        - npm
-        - openconnect
         - openresolv
         - openssh
         - otf-font-awesome
-        - ovmf
         - pacman-contrib
         - pavucontrol
         - picom
@@ -50,7 +41,6 @@
         - python-pillow
         - python-pynvim
         - qbittorrent
-        - qemu
         - qt5ct
         - qt5-styleplugins
         - ranger
@@ -61,14 +51,12 @@
         - sxhkd
         - systemd-swap
         - tlp
-        - ttf-cascadia-code
         - ttf-croscore
         - ttf-opensans
         - ttf-roboto
         - unclutter
         - unrar
         - unzip
-        - virt-manager
         - vlc
         - wget
         - wireguard-arch
@@ -81,7 +69,6 @@
         - xorg-xrandr
         - xorg-xsetroot
         - xsel
-        - yarn
         - zip
         - zsh
         - zsh-autosuggestions
