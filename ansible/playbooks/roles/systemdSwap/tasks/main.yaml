@@ -1,0 +1,6 @@
+---
+- name: Enable systemd-swap
+  copy:
+    src: swap.conf
+    dest: /etc/systemd/swap.conf.d/swap.conf 
+    force: yes

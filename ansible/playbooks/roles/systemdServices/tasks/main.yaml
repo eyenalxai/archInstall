@@ -27,3 +27,7 @@
   systemd:
     name: systemd-networkd.service
     enabled: yes
+- name: Enable systemd-swap service
+  systemd:
+    name: systemd-swap.service
+    enabled: yes

@@ -21,7 +21,8 @@
     - { role: lockScreen, tags: [ 'lockScreen' ] }                          # Copy stuff for lockScreen 
     - { role: iwd, tags: [ 'iwd' ] }                                        # Copy iwd config
     # - { role: resolv, tags: [ 'resolv' ] }                                  # Copy resolv config
-    - { role: systemdNetworkd, tags: [ 'systemdNetworkd' ] }                # Copy systemdNetworkd config
+    - { role: systemdNetworkd, tags: [ 'systemdNetworkd' ] }                # Copy systemd-networkd config
+    - { role: systemdSwap, tags: [ 'systemdSwap' ] }                        # Copy systemd-swap config
     - { role: systemdServices, tags: [ 'systemdServices' ] }                # Enable systemd services
     - { role: rootlessXorg, tags: [ 'rootlessXorg' ] }                      # Enable rootless Xorg
     - { role: swappiness10, tags: [ 'swappiness10' ] }                      # Set swappiness to 10
