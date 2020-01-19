@@ -26,7 +26,7 @@
     line: "{{ item.line }}"
   loop:
     - { line: '{{ username }} ALL = (ALL) ALL' }
-    - { line: '{{ username }} ALL = NOPASSWD: /usr/bin/yay, /usr/bin/pacman, /usr/bin/paccache' }
+    - { line: '{{ username }} ALL = NOPASSWD: /usr/bin/yay, /usr/bin/pacman, /usr/bin/paccache, /usr/bin/wg-quick' }
 - name: Recursively change ownership of the home directory
   file:
     path: "/home/{{ username }}"
