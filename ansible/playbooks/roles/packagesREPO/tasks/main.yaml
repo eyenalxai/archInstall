@@ -12,24 +12,27 @@
         - bspwm
         - btrfs-progs
         - chromium
+        - cmake
         - enchant
         - feh
         - git
         - gnome-keyring
         - grml-zsh-config
         - hsetroot
-        - htop
         - hunspell-en_US
         - intel-ucode
         - iwd
         - kitty
         - libgnome-keyring
+        - libmng
         - libnotify
         - linux-firmware
         - lxappearance
         - maim
         - neovim
         - nextcloud-client
+        - npm
+        - openal
         - openresolv
         - openssh
         - otf-font-awesome
@@ -42,16 +45,20 @@
         - python-pynvim
         - qbittorrent
         - qt5ct
+        - qt5-imageformats
         - qt5-styleplugins
         - ranger
         - reflector
+        - rhash
         - rofi-pass
         - seahorse
         - snapper
+        - sshfs
         - sxhkd
         - systemd-swap
         - tlp
         - ttf-croscore
+        - ttf-jetbrains-mono
         - ttf-opensans
         - ttf-roboto
         - unclutter
@@ -69,6 +76,8 @@
         - xorg-xrandr
         - xorg-xsetroot
         - xsel
+        - xxhash
+        - yarn
         - zip
         - zsh
         - zsh-autosuggestions
