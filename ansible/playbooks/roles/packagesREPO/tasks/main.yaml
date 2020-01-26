@@ -4,6 +4,7 @@
     state: present
     name:
         - adobe-source-han-sans-otc-fonts
+        - ansible
         - atool
         - base
         - bbswitch
@@ -26,6 +27,7 @@
         - libgnome-keyring
         - libmng
         - libnotify
+        - linux
         - linux-firmware
         - lxappearance
         - maim
@@ -33,7 +35,6 @@
         - nextcloud-client
         - npm
         - openal
-        - openresolv
         - openssh
         - otf-font-awesome
         - pacman-contrib
@@ -57,8 +58,8 @@
         - sxhkd
         - systemd-swap
         - tlp
+        - ttf-cascadia-code
         - ttf-croscore
-        - ttf-jetbrains-mono
         - ttf-opensans
         - ttf-roboto
         - unclutter
