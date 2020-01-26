@@ -5,6 +5,7 @@
     name:
         - adobe-source-han-sans-otc-fonts
         - ansible
+        - asp
         - atool
         - base
         - bbswitch
@@ -31,10 +32,12 @@
         - linux-firmware
         - lxappearance
         - maim
+        - neofetch
         - neovim
         - nextcloud-client
         - npm
         - openal
+        - openresolv
         - openssh
         - otf-font-awesome
         - pacman-contrib

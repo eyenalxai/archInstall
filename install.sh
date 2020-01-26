@@ -60,7 +60,8 @@ if [[ -z ${1-} ]]; then
 	
 	username='dmitry'
 	hostname='archbox'
-	
+	timezone='Europe/Samara'
+
     # If the drive is NVMe the naming scheme differs from the usual naming
     #if echo ${drive} | grep "nvme"; then
     #    Part1Name="p1"
@@ -135,7 +136,7 @@ if [[ -z ${1-} ]]; then
     git clone https://git.auteiy.me/dmitry/archInstall.git /mnt/home/${username}/Stuff/archInstall
 
 	# Prepare answers for ansible
-	declare -p hostname username drive loginPrivate passwordPrivate urlPrivate > /mnt/root/answerfile
+	declare -p hostname username drive timezone loginPrivate passwordPrivate urlPrivate > /mnt/root/answerfile
 	
     # CHROOT
     # Script will continue from here because we defined ${1}

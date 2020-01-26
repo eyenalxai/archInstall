@@ -10,14 +10,6 @@
   loop:
     - { regexp: '^Color', line: 'Color' }
     - { regexp: '^TotalDownload', line: 'TotalDownload' }
-- name: Set makeflags to max number of threads - speeds up compiling PKGBUILDs, and set compressxz to max number of threads - speeds up compressing packages during installing
-  lineinfile:
-    dest: /etc/makepkg.conf
-    regexp: "{{ item.regexp }}"
-    line: "{{ item.line }}"
-  loop:
-    - { regexp: '^MAKEFLAGS=', line: 'MAKEFLAGS="-j$(nproc)"' }
-    - { regexp: '^COMPRESSXZ=', line: 'COMPRESSXZ=(xz -c -z - --threads=0)' }
 - name: Set max journal size to 200MB, prevents having up to 4GiB journal
   copy:
     src: 00-journal-size.conf

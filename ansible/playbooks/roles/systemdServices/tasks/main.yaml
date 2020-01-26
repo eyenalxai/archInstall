@@ -27,3 +27,7 @@
   systemd:
     name: systemd-swap.service
     enabled: yes
+- name: Enable systemd-timesyncd service
+  systemd:
+    name: systemd-timesyncd.service
+    enabled: yes
