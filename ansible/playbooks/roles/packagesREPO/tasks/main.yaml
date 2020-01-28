@@ -5,7 +5,6 @@
     name:
         - adobe-source-han-sans-otc-fonts
         - ansible
-        - asp
         - atool
         - base
         - bbswitch
@@ -14,7 +13,6 @@
         - bspwm
         - btrfs-progs
         - chromium
-        - cmake
         - enchant
         - feh
         - git
@@ -36,7 +34,6 @@
         - neovim
         - nextcloud-client
         - npm
-        - openal
         - openresolv
         - openssh
         - otf-font-awesome
@@ -53,19 +50,20 @@
         - qt5-styleplugins
         - ranger
         - reflector
-        - rhash
         - rofi-pass
         - seahorse
         - snapper
         - sshfs
         - sxhkd
         - systemd-swap
+        - terminus-font
         - tlp
         - ttf-cascadia-code
         - ttf-croscore
         - ttf-opensans
         - ttf-roboto
         - unclutter
+        - unp
         - unrar
         - unzip
         - vlc
@@ -75,12 +73,11 @@
         - wireless-regdb
         - xorg-server
         - xorg-xinit
-        - xorg-xinput
         - xorg-xprop
         - xorg-xrandr
         - xorg-xsetroot
         - xsel
-        - xxhash
+        - xtrlock
         - yarn
         - zip
         - zsh
