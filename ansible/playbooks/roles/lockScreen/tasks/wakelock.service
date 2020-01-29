@@ -6,7 +6,7 @@ Before=suspend.target
 User=dmitry
 Type=forking
 Environment=DISPLAY=:0
-ExecStart=betterlockscreen -l
+ExecStart=xtrlock
 
 [Install]
 WantedBy=suspend.target

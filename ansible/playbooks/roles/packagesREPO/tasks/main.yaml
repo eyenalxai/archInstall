@@ -3,8 +3,8 @@
   pacman:
     state: present
     name:
+        - ack
         - adobe-source-han-sans-otc-fonts
-        - ansible
         - atool
         - base
         - bbswitch
@@ -13,10 +13,16 @@
         - bspwm
         - btrfs-progs
         - chromium
+        - ctags
+        - dunst
         - enchant
         - feh
+        - fish
+        - fzf
         - git
+        - glances
         - gnome-keyring
+        - gnu-netcat
         - grml-zsh-config
         - hsetroot
         - hunspell-en_US
@@ -24,7 +30,6 @@
         - iwd
         - kitty
         - libgnome-keyring
-        - libmng
         - libnotify
         - linux
         - linux-firmware
@@ -33,6 +38,8 @@
         - neofetch
         - neovim
         - nextcloud-client
+        - nodejs
+        - noto-fonts
         - npm
         - openresolv
         - openssh
@@ -42,24 +49,28 @@
         - picom
         - pkgfile
         - pulseaudio
+        - pulseaudio-bluetooth
         - python-pillow
         - python-pynvim
         - qbittorrent
         - qt5ct
         - qt5-imageformats
         - qt5-styleplugins
+        - qt5-wayland
         - ranger
         - reflector
         - rofi-pass
         - seahorse
         - snapper
         - sshfs
+        - steam
         - sxhkd
         - systemd-swap
-        - terminus-font
         - tlp
         - ttf-cascadia-code
         - ttf-croscore
+        - ttf-dejavu
+        - ttf-jetbrains-mono
         - ttf-opensans
         - ttf-roboto
         - unclutter
@@ -70,7 +81,6 @@
         - wget
         - wireguard-arch
         - wireguard-tools
-        - wireless-regdb
         - xorg-server
         - xorg-xinit
         - xorg-xprop

@@ -60,7 +60,7 @@ if [[ -z ${1-} ]]; then
 	
 	username='dmitry'
 	hostname='archbox'
-	timezone='Europe/Samara'
+	timezone='Europe/Moscow'
 
     # If the drive is NVMe the naming scheme differs from the usual naming
     #if echo ${drive} | grep "nvme"; then
