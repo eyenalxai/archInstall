@@ -3,7 +3,6 @@
   pacman:
     state: present
     name:
-        - ack
         - adobe-source-han-sans-otc-fonts
         - atool
         - base
@@ -17,12 +16,9 @@
         - dunst
         - enchant
         - feh
-        - fish
         - fzf
         - git
-        - glances
         - gnome-keyring
-        - gnu-netcat
         - grml-zsh-config
         - hsetroot
         - hunspell-en_US
@@ -35,12 +31,9 @@
         - linux-firmware
         - lxappearance
         - maim
-        - neofetch
         - neovim
         - nextcloud-client
-        - nodejs
         - noto-fonts
-        - npm
         - openresolv
         - openssh
         - otf-font-awesome
@@ -56,14 +49,12 @@
         - qt5ct
         - qt5-imageformats
         - qt5-styleplugins
-        - qt5-wayland
         - ranger
         - reflector
         - rofi-pass
         - seahorse
         - snapper
         - sshfs
-        - steam
         - sxhkd
         - systemd-swap
         - tlp
@@ -71,8 +62,6 @@
         - ttf-croscore
         - ttf-dejavu
         - ttf-jetbrains-mono
-        - ttf-opensans
-        - ttf-roboto
         - unclutter
         - unp
         - unrar
@@ -88,7 +77,6 @@
         - xorg-xsetroot
         - xsel
         - xtrlock
-        - yarn
         - zip
         - zsh
         - zsh-autosuggestions
