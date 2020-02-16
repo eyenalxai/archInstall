@@ -34,6 +34,7 @@
         - neovim
         - nextcloud-client
         - noto-fonts
+        - npm
         - openresolv
         - openssh
         - otf-font-awesome
@@ -45,6 +46,7 @@
         - pulseaudio-bluetooth
         - python-pillow
         - python-pynvim
+        - python-virtualenv
         - qbittorrent
         - qt5ct
         - qt5-imageformats
