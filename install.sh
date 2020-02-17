@@ -63,22 +63,20 @@ if [[ -z ${1-} ]]; then
 	timezone='Europe/Moscow'
 
     # If the drive is NVMe the naming scheme differs from the usual naming
-    #if echo ${drive} | grep "nvme"; then
-    #    Part1Name="p1"
-    #    Part2Name="p2"
-    #else
-    #    Part1Name="1"
-    #    Part2Name="2"
-    #fi
-	Part1Name="5"
-    Part2Name="6"
+    if echo ${drive} | grep "nvme"; then
+        Part1Name="p1"
+        Part2Name="p2"
+    else
+        Part1Name="1"
+        Part2Name="2"
+    fi
     
     # Create partitions 
-    #wipefs -a /dev/${drive}
-    #parted -s /dev/${drive} mklabel gpt
-    #parted -s /dev/${drive} mkpart ESP fat32 1MiB 129MiB
-    #parted -s /dev/${drive} set 1 boot on
-    #parted -s /dev/${drive} mkpart primary btrfs 129MiB 100%
+    wipefs -a /dev/${drive}
+    parted -s /dev/${drive} mklabel gpt
+    parted -s /dev/${drive} mkpart ESP fat32 1MiB 129MiB
+    parted -s /dev/${drive} set 1 boot on
+    parted -s /dev/${drive} mkpart primary btrfs 129MiB 100%
     
     # BTRFS subvolumes 
     mkfs.btrfs -L ARCH /dev/${drive}${Part2Name} -f
