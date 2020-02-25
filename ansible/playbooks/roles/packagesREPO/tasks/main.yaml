@@ -12,7 +12,6 @@
         - bspwm
         - btrfs-progs
         - chromium
-        - ctags
         - dunst
         - enchant
         - feh
@@ -42,11 +41,11 @@
         - pavucontrol
         - picom
         - pkgfile
+        - pkgstats
         - pulseaudio
         - pulseaudio-bluetooth
         - python-pillow
         - python-pynvim
-        - python-virtualenv
         - qbittorrent
         - qt5ct
         - qt5-imageformats
@@ -60,7 +59,6 @@
         - sxhkd
         - systemd-swap
         - tlp
-        - ttf-cascadia-code
         - ttf-croscore
         - ttf-dejavu
         - ttf-jetbrains-mono
