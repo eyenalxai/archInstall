@@ -1,5 +1,5 @@
 ---
 - name: Update all packages + AUR packages
-  shell: yay -Syu betterlockscreen btrfs-du dashbinsh dragon-drag-and-drop future-fetch hunspell-ru ix kotatogram-desktop-bin la-capitaine-icon-theme neovim-plug polybar posy-cursors spaceship-prompt-git ttf-apple-emoji ttf-exo-2 ufetch-git yadm yay-bin --noconfirm
+  shell: yay -Syu anydesk-bin btrfs-du dashbinsh dragon-drag-and-drop future-fetch ix kotatogram-desktop-bin la-capitaine-icon-theme mantablockscreen neovim-plug polybar posy-cursors spaceship-prompt-git ttf-apple-emoji ttf-exo-2 ufetch-git xidlehook yadm yay-bin --noconfirm
   become: yes
   become_user: "{{ username }}"

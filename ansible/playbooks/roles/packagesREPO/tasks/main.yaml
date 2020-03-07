@@ -13,14 +13,13 @@
         - btrfs-progs
         - chromium
         - dunst
-        - enchant
         - feh
         - fzf
         - git
+        - glances
         - gnome-keyring
         - grml-zsh-config
         - hsetroot
-        - hunspell-en_US
         - intel-ucode
         - iwd
         - kitty
@@ -30,8 +29,12 @@
         - linux-firmware
         - lxappearance
         - maim
+        - mariadb
+        - namcap
+        - ncdu
         - neovim
         - nextcloud-client
+        - nginx
         - noto-fonts
         - npm
         - openresolv
@@ -44,6 +47,7 @@
         - pkgstats
         - pulseaudio
         - pulseaudio-bluetooth
+        - pv
         - python-pillow
         - python-pynvim
         - qbittorrent
@@ -53,6 +57,7 @@
         - ranger
         - reflector
         - rofi-pass
+        - rsync
         - seahorse
         - snapper
         - sshfs

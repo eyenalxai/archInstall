@@ -2,5 +2,5 @@
 - name: Copy service file for lockscreen
   copy:
     src: wakelock.service
-    dest: /etc/systemd/system/wakelock.service
+    dest: /usr/lib/systemd/system/wakelock.service
     force: yes
