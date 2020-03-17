@@ -29,6 +29,7 @@
         - libnotify
         - linux
         - linux-firmware
+        - lsb-release
         - lxappearance
         - maim
         - mariadb
