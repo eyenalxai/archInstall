@@ -4,46 +4,46 @@
     state: present
     name:
         - adobe-source-han-sans-otc-fonts
-        - alacritty
+        - arp-scan
         - atool
         - base
         - bbswitch
+        - bind-tools
         - bluez
         - bluez-utils
         - bspwm
         - btrfs-progs
+        - certbot
         - chromium
         - dunst
         - feh
-        - fish
         - fzf
         - git
         - glances
         - gnome-keyring
         - grml-zsh-config
         - hsetroot
+        - htop
         - intel-ucode
         - iwd
+        - jq
         - kitty
         - libgnome-keyring
         - libnotify
         - linux
         - linux-firmware
-        - lsb-release
         - lxappearance
         - maim
-        - mariadb
         - namcap
         - ncdu
         - neofetch
         - neovim
         - nextcloud-client
-        - nginx
         - noto-fonts
-        - npm
-        - openresolv
         - openssh
+        - openvpn
         - otf-font-awesome
+        - p7zip
         - pacman-contrib
         - pavucontrol
         - picom
@@ -51,7 +51,6 @@
         - pkgstats
         - pulseaudio
         - pulseaudio-bluetooth
-        - pv
         - python-pillow
         - python-pynvim
         - qbittorrent
@@ -62,14 +61,17 @@
         - reflector
         - rofi-pass
         - rsync
-        - rustup
+        - rust
         - seahorse
         - shellcheck
         - snapper
         - sshfs
         - sxhkd
+        - systemd-resolvconf
         - systemd-swap
+        - tftp-hpa
         - tlp
+        - traceroute
         - ttf-croscore
         - ttf-dejavu
         - ttf-jetbrains-mono
@@ -79,7 +81,6 @@
         - unzip
         - vlc
         - wget
-        - wireguard-arch
         - wireguard-tools
         - wmctrl
         - xorg-server
