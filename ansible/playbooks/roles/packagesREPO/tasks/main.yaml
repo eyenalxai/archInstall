@@ -17,6 +17,7 @@
         - chromium
         - dunst
         - feh
+        - filezilla
         - fzf
         - git
         - glances
@@ -70,7 +71,6 @@
         - systemd-resolvconf
         - systemd-swap
         - tftp-hpa
-        - tlp
         - traceroute
         - ttf-croscore
         - ttf-dejavu
@@ -81,6 +81,7 @@
         - unzip
         - vlc
         - wget
+        - whois
         - wireguard-tools
         - wmctrl
         - xorg-server
